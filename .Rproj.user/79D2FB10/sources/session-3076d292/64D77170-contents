@@ -1,0 +1,57 @@
+---
+title: "Penguins - Sev"
+format: 
+  html:
+    code-fold: true
+---
+
+```{r}
+renv::activate()
+#renv::init()
+```
+
+```{r}
+#install.packages("palmerpenguins")
+#install.packages("dplyr")
+#install.packages("renv")
+```
+
+```{r}
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+```
+
+```{r}
+df <- palmerpenguins::penguins
+
+df %>%
+
+  group_by(species, sex) %>%
+
+  summarise(
+
+    across(
+
+      where(is.numeric), 
+
+      \(x) mean(x, na.rm = TRUE)
+
+      )
+
+    ) %>%
+
+  knitr::kable()
+```
+
+```{r}
+## Penguin Size vs Mass by Species
+
+df %>%
+
+  ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+
+  geom_point() + 
+
+  geom_smooth(method = "lm")
+```

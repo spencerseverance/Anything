@@ -1,0 +1,3 @@
+"0","from vetiver import VetiverModel "
+"0","v = VetiverModel(model, model_name='penguin_model', prototype_data=X)"
+"0",""

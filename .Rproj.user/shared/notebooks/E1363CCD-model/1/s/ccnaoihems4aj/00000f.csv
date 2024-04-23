@@ -1,0 +1,3 @@
+"0","from vetiver import VetiverAPI "
+"0","app = VetiverAPI(v, check_prototype = True)"
+"0",""

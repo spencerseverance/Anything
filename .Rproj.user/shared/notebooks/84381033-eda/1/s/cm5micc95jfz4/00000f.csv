@@ -1,0 +1,25 @@
+"0","#install.packages(""palmerpenguins"")"
+"0","#install.packages(""dplyr"")"
+"0","#install.packages(""renv"")"
+"0",""
+"0","library(palmerpenguins)"
+"0",""
+"0","library(dplyr)"
+"2","
+Attaching package: ‘dplyr’
+
+"
+"2","The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","library(ggplot2)"
+"2","Need help? Try Stackoverflow: https://stackoverflow.com/tags/ggplot2
+"
+"0","df <- palmerpenguins::penguins"

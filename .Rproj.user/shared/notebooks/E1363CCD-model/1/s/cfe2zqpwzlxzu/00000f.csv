@@ -1,0 +1,6 @@
+"0","X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)"
+"0",""
+"0","y = df['body_mass_g']"
+"0",""
+"0","model = LinearRegression().fit(X, y)"
+"0",""

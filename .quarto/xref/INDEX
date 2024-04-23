@@ -1,0 +1,23 @@
+{
+  "eda.qmd": {
+    "eda.html": "e77831fc"
+  },
+  "about.qmd": {
+    "about.html": "923be3bc"
+  },
+  "model.qmd": {
+    "model.html": "d646cc04"
+  },
+  "eda-db.qmd": {
+    "eda-db.html": "28f67abb"
+  },
+  "model2.qmd": {
+    "model2.html": "7f8ffda2"
+  },
+  "r-data-load.qmd": {
+    "r-data-load.html": "26c2d487"
+  },
+  "index.qmd": {
+    "index.html": "715b40db"
+  }
+}

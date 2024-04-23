@@ -1,0 +1,52 @@
+"0","#install.packages(""palmerpenguins"")"
+"0","#install.packages(""dplyr"")"
+"0","#install.packages(""renv"")"
+"0",""
+"0","library(palmerpenguins)"
+"0","library(dplyr)"
+"2","
+Attaching package: ‘dplyr’
+
+"
+"2","The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","library(dbplyr)"
+"2","Registered S3 methods overwritten by 'dbplyr':
+  method         from
+  print.tbl_lazy     
+  print.tbl_sql      
+"
+"2","
+Attaching package: ‘dbplyr’
+
+"
+"2","The following objects are masked from ‘package:dplyr’:
+
+    ident, sql
+
+"
+"0","library(ggplot2)"
+"0","library(DBI)"
+"0","library(duckdb)"
+"0",""
+"0","#con <- DBI::dbConnect(duckdb::duckdb(), dbdir = ""my-db.duckdb"")"
+"0","#DBI::dbWriteTable(con, ""penguins"", palmerpenguins::penguins)"
+"0","#DBI::dbDisconnect(con)"
+"0",""
+"0",""
+"0","df <- palmerpenguins::penguins"
+"0",""
+"0","con <- DBI::dbConnect(duckdb::duckdb(), dbdir = ""my-db.duckdb"")"
+"0",""
+"0",""
+"0","df <- dplyr::tbl(con, ""penguins"")"
+"0",""
+"0","#df <- palmerpenguins::penguins"

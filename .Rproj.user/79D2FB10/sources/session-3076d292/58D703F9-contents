@@ -1,0 +1,310 @@
+{
+  "cells": [
+    {
+      "cell_type": "raw",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Model\"\n",
+        "format:\n",
+        "  html:\n",
+        "    code-fold: true\n",
+        "---"
+      ],
+      "id": "29ee1f6d"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# from palmerpenguins import penguins\n",
+        "# \n",
+        "# from pandas import get_dummies\n",
+        "# \n",
+        "# import numpy as np\n",
+        "# \n",
+        "# from sklearn.linear_model import LinearRegression\n",
+        "# \n",
+        "# from sklearn import preprocessing\n"
+      ],
+      "id": "b4e4b0f2",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "\\## Get Data\n"
+      ],
+      "id": "a3943ace"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# import duckdb\n",
+        "# con = duckdb.connect('my-db.duckdb')\n",
+        "# df = con.execute(\"SELECT * FROM penguins\").fetchdf().dropna()\n",
+        "# con.close()\n",
+        "# \n",
+        "# df.head(3)"
+      ],
+      "id": "df401efe",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# df = penguins.load_penguins().dropna()\n",
+        "# \n",
+        "# df.head(3)"
+      ],
+      "id": "53f0192f",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "\\## Define Model and Fit\n"
+      ],
+      "id": "fa939851"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)\n",
+        "# \n",
+        "# y = df['body_mass_g']\n",
+        "# \n",
+        "# model = LinearRegression().fit(X, y)"
+      ],
+      "id": "dd52d5b9",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "\\## Get some information\n"
+      ],
+      "id": "209a597a"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# print(f\"R^2 {model.score(X,y)}\")\n",
+        "# \n",
+        "# print(f\"Intercept {model.intercept_}\")\n",
+        "# \n",
+        "# print(f\"Columns {X.columns}\")\n",
+        "# \n",
+        "# print(f\"Coefficients {model.coef_}\")"
+      ],
+      "id": "791af4b4",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# import duckdb\n",
+        "# con = duckdb.connect('my-db.duckdb')\n",
+        "# df = con.execute(\"SELECT * FROM penguins\").fetchdf().dropna()\n",
+        "# con.close()\n",
+        "# \n",
+        "# df.head(3)"
+      ],
+      "id": "179364e2",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# from pins import board_folder\n",
+        "# from vetiver import vetiver_pin_write\n",
+        "# \n",
+        "# model_board = board_folder(\n",
+        "#   \"/data/model\", \n",
+        "#   allow_pickle_read = True\n",
+        "# )\n",
+        "# vetiver_pin_write(model_board, v)\n",
+        "# \n"
+      ],
+      "id": "d6808f37",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from pandas import get_dummies\n",
+        "\n",
+        "import numpy as np\n",
+        "\n",
+        "from sklearn.linear_model import LinearRegression\n",
+        "\n",
+        "from sklearn import preprocessing"
+      ],
+      "id": "18416e97",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "\\## Get Data\n"
+      ],
+      "id": "946ed65a"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import duckdb\n",
+        "\n",
+        "con = duckdb.connect('my-db.duckdb')\n",
+        "\n",
+        "df = con.execute(\"SELECT * FROM penguins\").fetchdf().dropna()\n",
+        "\n",
+        "con.close()\n",
+        "\n",
+        "df.head(3)"
+      ],
+      "id": "b10d6d85",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "\\## Define Model and Fit\n"
+      ],
+      "id": "01eedcab"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)\n",
+        "\n",
+        "y = df['body_mass_g']\n",
+        "\n",
+        "model = LinearRegression().fit(X, y)"
+      ],
+      "id": "60e62ad6",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "\\## Get some information\n"
+      ],
+      "id": "ac206d85"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "print(f\"R^2 {model.score(X,y)}\")\n",
+        "\n",
+        "print(f\"Intercept {model.intercept_}\")\n",
+        "\n",
+        "print(f\"Columns {X.columns}\")\n",
+        "\n",
+        "print(f\"Coefficients {model.coef_}\")"
+      ],
+      "id": "ed1b6537",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "\\## Turn into Vetiver Model\n"
+      ],
+      "id": "96412937"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from vetiver import VetiverModel\n",
+        "\n",
+        "v = VetiverModel(model, model_name='penguin_model', prototype_data=X)"
+      ],
+      "id": "ab80c692",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "\\## Save to Board\n"
+      ],
+      "id": "7928ed85"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from pins import board_folder\n",
+        "\n",
+        "from vetiver import vetiver_pin_write\n",
+        "\n",
+        "model_board = board_folder(\"/data/model\", allow_pickle_read = True)\n",
+        "\n",
+        "vetiver_pin_write(model_board, v)"
+      ],
+      "id": "b1f82eee",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "\\## Turn model into API\n"
+      ],
+      "id": "9d9f141a"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from vetiver import VetiverAPI\n",
+        "\n",
+        "app = VetiverAPI(v, check_prototype = True)"
+      ],
+      "id": "554deb1e",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

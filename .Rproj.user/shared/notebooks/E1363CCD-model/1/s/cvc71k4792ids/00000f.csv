@@ -1,0 +1,12 @@
+"0","print(f""R^2 {model.score(X,y)}"")"
+"1","R^2 0.8555368759537614
+"
+"0","print(f""Intercept {model.intercept_}"")"
+"1","Intercept 2169.269720939398
+"
+"0","print(f""Columns {X.columns}"")"
+"1","Columns Index(['bill_length_mm', 'species_Chinstrap', 'species_Gentoo', 'sex_male'], dtype='object')
+"
+"0","print(f""Coefficients {model.coef_}"")"
+"1","Coefficients [  32.53688677 -298.76553447 1094.86739145  547.36692408]
+"
