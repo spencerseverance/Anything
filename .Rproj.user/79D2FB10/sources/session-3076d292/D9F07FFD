@@ -1,14 +1,14 @@
 {
-    "id": "A21614D1",
-    "path": "~/Math 378/378 Final Project/Final Project - Sev/model.qmd",
-    "project_path": "model.qmd",
+    "id": "D9F07FFD",
+    "path": "~/Math 378/378 Final Project/Final Project - Sev/model2.qmd",
+    "project_path": "model2.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "1773532959",
     "contents": "",
     "dirty": false,
-    "created": 1713386612736.0,
+    "created": 1713889694155.0,
     "source_on_save": false,
-    "relative_order": 5,
+    "relative_order": 13,
     "properties": {
         "rmdVisualMode": "true",
         "rmdVisualWrapConfigured": "true",
@@ -16,16 +16,16 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "cursorPosition": "73,0",
+        "cursorPosition": "63,0",
         "scrollLine": "0",
-        "rmdVisualModeLocation": "725:932"
+        "rmdVisualModeLocation": "1081:798"
     },
     "folds": "",
-    "lastKnownWriteTime": 1713888949,
+    "lastKnownWriteTime": 1713889719,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1713888949048,
+    "last_content_update": 1713889719971,
     "read_only": false,
     "read_only_alternatives": []
 }
