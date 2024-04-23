@@ -1,7 +1,0 @@
-"0","df %>%"
-"0",""
-"0","  ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +"
-"0",""
-"0","  geom_point() + "
-"0",""
-"0","  geom_smooth(method = ""lm"")"
